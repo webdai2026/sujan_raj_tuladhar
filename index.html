@@ -1,1 +1,512 @@
- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Metadata -->
+  <title>Sujan Raj Tuladhar | Full Stack Django Developer & AWS Certified</title>
+  <meta name="description" content="Full Stack Django Developer with 6+ years experience building scalable web applications using Docker, Nginx, Redis, and AWS. AWS Certified Cloud Practitioner. Turning ideas into high-performance, cloud-native solutions for global businesses.">
+  <meta name="keywords" content="full stack django developer, aws certified cloud practitioner, python developer, docker nginx redis, aws lambda, rest api developer, software engineer nepal, scalable web applications">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sujan Raj Tuladhar | Full Stack Django & AWS Expert">
+  <meta property="og:description" content="Full Stack Django Developer with 6+ years experience building scalable web applications using Docker, Nginx, Redis, and AWS. AWS Certified Cloud Practitioner. Turning ideas into high-performance, cloud-native solutions for global businesses.">
+  <meta property="og:image" content="#">
+  <meta property="og:url" content="#">
+  <meta property="og:type" content="profile">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e293b;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: #2563eb;
+      border-radius: 4px;
+    }
+    .subhead {
+      font-size: 1.25rem;
+      color: #2563eb;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+    }
+    /* no generic button styles except whatsapp */
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+      border: 2px solid transparent;
+      box-shadow: 0 10px 20px -8px rgba(37, 211, 102, 0.3);
+    }
+    .btn-whatsapp i {
+      font-size: 1.2rem;
+    }
+    .btn-whatsapp:hover {
+      background-color: #20b859;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -8px rgba(37, 211, 102, 0.4);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-content .micro {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    .image-placeholder {
+      background: #e9eef3;
+      border-radius: 2rem;
+      width: 100%;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4b5563;
+      font-size: 1.25rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.05);
+    }
+    .image-placeholder i {
+      font-size: 3rem;
+      color: #94a3b8;
+    }
+    .image-placeholder:hover {
+      transform: scale(1.01);
+      box-shadow: 0 25px 35px -12px rgba(37,99,235,0.15);
+    }
+
+    /* about section with stats (no image) */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .highlight-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    .highlight-list li {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    /* icons removed, but flex and gap remain harmless */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .stat-card {
+      background: #ffffff;
+      border: 1px solid #f1f5f9;
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.03);
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: #2563eb30;
+      box-shadow: 0 25px 30px -15px #2563eb40;
+    }
+    /* stat-icon div removed entirely */
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1e293b;
+    }
+    .stat-label {
+      font-size: 0.95rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .skill-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
+    }
+    .skill-card:hover {
+      border-color: #2563eb30;
+      box-shadow: 0 15px 30px -15px #2563eb40;
+      transform: translateY(-6px);
+    }
+    .skill-card h3 {
+      margin-bottom: 1rem;
+      color: #2563eb;
+      font-size: 1.35rem;
+    }
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+    }
+    .skill-tag {
+      background: #f8fafc;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+    .aws-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem 1rem;
+      margin: 2rem 0 0;
+      list-style: none;
+    }
+    .aws-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .aws-list i {
+      color: #2563eb;
+      font-size: 0.9rem;
+    }
+    .cert-list {
+      list-style: none;
+    }
+    .cert-list li {
+      margin-bottom: 1rem;
+      font-weight: 450;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .cert-list i {
+      color: #2563eb;
+      font-size: 1.25rem;
+    }
+    .cta-section {
+      text-align: center;
+      background: #ffffff;
+      border-radius: 3rem;
+      padding: 3rem 2rem;
+      border: 1px solid #f1f5f9;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.02);
+    }
+    .cta-section h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+    }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #64748b;
+      border-top: 1px solid #f1f5f9;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 1rem 0 0;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #2563eb;
+    }
+    .social-icon {
+      color: #2563eb;
+      font-size: 1.3rem;
+      margin: 0 0.3rem;
+    }
+    .global-badge {
+      display: inline-block;
+      background: #f1f5f9;
+      padding: 0.25rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.1, 1), transform 0.8s cubic-bezier(0.2, 0.9, 0.1, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.9rem; }
+      .hero-grid, .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero-content .micro { text-align: center; }
+      section { padding: 3rem 0; }
+      .stats-grid { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Hero Section (no buttons) -->
+    <section id="hero">
+      <div class="hero-grid">
+        <div class="hero-content fade-up">
+          <h1>Sujan Raj Tuladhar</h1>
+          <div class="subhead">Full Stack Django Developer & AWS Certified Cloud Practitioner</div>
+          <p style="font-size: 1.5rem; font-weight: 500; line-height: 1.3; margin-bottom: 1rem;">I build fast, scalable, cloud-native web applications that power modern businesses worldwide.</p>
+          <p>With over 6 years of Python & Django expertise and hands-on experience in Docker, Nginx, Redis, and AWS services, I turn complex ideas into reliable, high-performance digital solutions. Currently driving innovation at Evoya AI.</p>
+          <!-- no button group -->
+          <div class="micro">
+            <span class="global-badge"><i class="fa-regular fa-globe"></i> Open to remote opportunities • Based in Nepal • Serving clients globally</span>
+          </div>
+        </div>
+        <div class="hero-image fade-up">
+          <div class="image-placeholder">
+             <img src="sujan_img.png" alt="Sujan Raj Tuladhar" >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section – icons removed (both list and stat cards) -->
+    <section id="about">
+      <h2>About Sujan</h2>
+      <div class="about-grid">
+        <div class="fade-up">
+          <p>I am a passionate Full Stack Django Developer with more than 6 years of professional experience crafting robust web applications. Specializing in the complete modern stack — Django, Docker, Nginx, Redis, and AWS cloud infrastructure — I help startups and established companies build secure, scalable, and cost-efficient digital products.</p>
+          <p>Currently working as Software Engineer at Evoya AI, I have successfully migrated monolithic Django applications to microservices on AWS, reduced infrastructure costs by up to 60% using AWS Lambda, and implemented best practices in code review, Scrum, and DevOps.</p>
+          <p>My mission is simple: deliver clean, maintainable code that scales globally and performs flawlessly under any load.</p>
+          <ul class="highlight-list">
+            <!-- icons removed -->
+            <li>AWS Certified Cloud Practitioner (2023)</li>
+            <li>Expert in Dockerized Django + Redis + Nginx deployments</li>
+            <li>Strong background in REST APIs, microservices, and cloud architecture</li>
+            <li>Passionate about clean code, performance optimization, and continuous learning</li>
+          </ul>
+        </div>
+        <!-- interactive stat cards without icons -->
+        <div class="stats-grid fade-up">
+          <div class="stat-card">
+            <!-- stat-icon div removed -->
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Years experience</div>
+          </div>
+          <div class="stat-card">
+            <!-- stat-icon div removed -->
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <!-- stat-icon div removed -->
+            <div class="stat-number">60%</div>
+            <div class="stat-label">Cost reduction</div>
+          </div>
+          <div class="stat-card">
+            <!-- stat-icon div removed -->
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Projects delivered</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise & Core Skills -->
+    <section id="skills">
+      <h2>Technical Expertise</h2>
+      <p style="max-width: 650px;">My technology stack is built for speed, scalability, and reliability — exactly what global businesses need today.</p>
+      <div class="skills-grid">
+        <div class="skill-card fade-up">
+          <h3>Backend & Frameworks</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Django</span><span class="skill-tag">Python</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Microservices</span><span class="skill-tag">Gunicorn</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>DevOps & Container</h3>
+          <div class="skill-items">
+            <span class="skill-tag">Docker</span><span class="skill-tag">Nginx</span><span class="skill-tag">Redis</span><span class="skill-tag">Caching</span><span class="skill-tag">Load Testing</span><span class="skill-tag">Linux</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>AWS (Certified)</h3>
+          <div class="skill-items">
+            <span class="skill-tag">EC2</span><span class="skill-tag">Lambda</span><span class="skill-tag">S3</span><span class="skill-tag">RDS</span><span class="skill-tag">ECS/Fargate</span><span class="skill-tag">CloudFront</span><span class="skill-tag">Route53</span><span class="skill-tag">Auto Scaling</span><span class="skill-tag">EventBridge</span><span class="skill-tag">Secret Manager</span><span class="skill-tag">CDK</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Frontend & Others</h3>
+          <div class="skill-items">
+            <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Git</span><span class="skill-tag">Scrum</span><span class="skill-tag">Code Review</span>
+          </div>
+        </div>
+        <div class="skill-card fade-up">
+          <h3>Databases</h3>
+          <div class="skill-items">
+            <span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">Redis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWS Cloud Mastery -->
+    <section id="aws">
+      <h2>AWS Cloud Mastery</h2>
+      <div class="fade-up">
+        <p><strong>Certified in AWS Cloud Practitioner</strong> and actively using AWS services daily. I specialize in cost-optimized, serverless, and containerized architectures that help businesses reduce expenses while scaling effortlessly.</p>
+        <p>Recent impact: Migrated production Django apps to microservices on AWS and achieved 60% cost savings with Lambda and auto-scaling.</p>
+      </div>
+      <ul class="aws-list fade-up">
+        <li><i class="fa-regular fa-circle"></i> Amazon EC2</li><li><i class="fa-regular fa-circle"></i> Elastic Load Balancing</li>
+        <li><i class="fa-regular fa-circle"></i> S3</li><li><i class="fa-regular fa-circle"></i> RDS</li>
+        <li><i class="fa-regular fa-circle"></i> ECS / Fargate</li><li><i class="fa-regular fa-circle"></i> Lambda</li>
+        <li><i class="fa-regular fa-circle"></i> CloudFront</li><li><i class="fa-regular fa-circle"></i> Route 53</li>
+        <li><i class="fa-regular fa-circle"></i> EventBridge</li><li><i class="fa-regular fa-circle"></i> Secret Manager</li>
+        <li><i class="fa-regular fa-circle"></i> Auto Scaling</li><li><i class="fa-regular fa-circle"></i> Launch Templates</li>
+      </ul>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section id="certifications">
+      <h2>Certifications & Continuous Learning</h2>
+      <ul class="cert-list fade-up">
+        <li><i class="fa-regular fa-certificate"></i> Ultimate AWS Certified Cloud Practitioner – 2023</li>
+        <li><i class="fa-regular fa-certificate"></i> Practical Web Development with Docker, Django, Nginx & Redis (2025)</li>
+        <li><i class="fa-regular fa-certificate"></i> Multiple LinkedIn Skill Assessments passed (Python, JavaScript, REST APIs, Linux, Git, OOP, MySQL)</li>
+      </ul>
+    </section>
+
+    <!-- CTA: WhatsApp Connect (only call-to-action) -->
+    <section id="cta" style="border-bottom: none;">
+      <div class="cta-section fade-up">
+        <h2>Ready to bring your idea to life?</h2>
+        <p style="max-width: 550px; margin: 1.5rem auto;">Whether you need a new Django web application, migration to AWS microservices, performance optimization, or full‑stack development support — I’m here to help.</p>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let’s discuss your project and create something extraordinary together.</p>
+        <!-- WhatsApp connect button -->
+        <a href="https://wa.link/9xp7mp" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Connect on WhatsApp
+        </a>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;"><i class="fa-regular fa-comment"></i> Quick reply • typically within hours</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Sujan Raj Tuladhar. All rights reserved.</p>
+    <p>Full Stack Django Developer | AWS Certified | Open to worldwide remote projects</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#aws">AWS</a>
+      <a href="#cta">Contact</a>
+      <a href="https://www.linkedin.com/in/sujan-raj-tuladhar-41234017a/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin social-icon"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scroll animation script -->
+  <script>
+    (function() {
+      const faders = document.querySelectorAll('.fade-up');
+      const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -30px 0px" };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach(fader => appearOnScroll.observe(fader));
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === "#") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
